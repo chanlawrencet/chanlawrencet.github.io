@@ -10,10 +10,9 @@ import Footer from "./components/Footer"
 
 const appStyle = {
   fontFamily: 'Roboto',
-  marginTop: 40,
   display: 'flex',
   justifyContent: 'center',
-  color: 'black',
+  color: '#646464',
 }
 
 function App() {

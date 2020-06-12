@@ -11,7 +11,7 @@ const Reading = () => (
     }}
   >
     <div
-      style={{fontSize: 20, fontWeight: 'bold'}}
+      style={{fontSize: 25, fontWeight: 'bold', width: 200, marginBottom: 10}}
     >
       Reading
     </div>

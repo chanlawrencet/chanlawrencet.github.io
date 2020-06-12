@@ -2,9 +2,9 @@ import React from "react"
 
 const Header = () => (
   <div
-    style={{fontSize: 40, fontWeight: 'bold'}}
+    style={{fontSize: 40, fontWeight: 'bold', marginTop: 40,}}
   >
-    Hi, I'm Lawrence Chan!
+    Hi, I'm Lawrence Chan! 👋
   </div>
 )
 

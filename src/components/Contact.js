@@ -11,12 +11,12 @@ const Contact = () => (
     }}
   >
     <div
-      style={{fontSize: 20, fontWeight: 'bold'}}
+      style={{fontSize: 25, fontWeight: 'bold', width: 200, marginBottom: 10}}
     >
       Contact
     </div>
     <div
-      style={{width: 300}}
+      style={{minWidth: 300}}
     >
       <ListLink
         link='mailto:chanlawrencet@gmail.com'
