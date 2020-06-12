@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Reading from "./components/Reading"
+import Blurb from "./components/Blurb"
+import Header from "./components/Header"
+import Recs from "./components/Recs"
+import Projects from "./components/Projects"
+import Links from "./components/Links"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
+
+const appStyle = {
+  fontFamily: 'Roboto',
+  marginTop: 40,
+  display: 'flex',
+  justifyContent: 'center',
+  color: 'black',
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={appStyle}>
+      <div style={{flexDirection: 'column', maxWidth: 600, margin: 20,}}>
+        <Header/>
+        <Blurb/>
+        <Links/>
+        <Reading/>
+        <Recs/>
+        <Projects/>
+        <Contact/>
+        <Footer/>
+      </div>
     </div>
   );
 }
