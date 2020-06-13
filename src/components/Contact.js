@@ -23,11 +23,6 @@ const Contact = () => (
         linkText='Email'
         description='chanlawrencet@gmail.com'
       />
-      <ListLink
-        link='tel:908-367-0702'
-        linkText='Phone'
-        description='908-367-0702'
-      />
     </div>
   </div>
 )
