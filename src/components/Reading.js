@@ -18,10 +18,11 @@ const Reading = () => (
     <div
       style={{maxWidth: 300}}
     >
+
       <ListLink
-        link='https://www.goodreads.com/book/show/41023090-the-second-mountain'
-        linkText='The Second Mountain: The Quest for a Moral Life'
-        description='David Brooks'
+        link='https://www.goodreads.com/book/show/53331127-pachinko'
+        linkText='Pachinko'
+        description='Min Jin Lee'
       />
       <ListLink
         link='https://www.goodreads.com/book/show/36247169-educated'
