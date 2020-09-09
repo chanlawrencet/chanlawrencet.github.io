@@ -16,7 +16,7 @@ const Reading = () => (
       Reading
     </div>
     <div
-      style={{maxWidth: 300}}
+      style={{width: 300}}
     >
 
       <ListLink
@@ -25,14 +25,14 @@ const Reading = () => (
         description='Min Jin Lee'
       />
       <ListLink
-        link='https://www.goodreads.com/book/show/36247169-educated'
-        linkText='Educated'
-        description='Tara Westover'
+        link='https://www.goodreads.com/book/show/22823462-the-life-changing-magic-of-tidying-up'
+        linkText='The Life-Changing Magic of Tidying Up'
+        description=' Marie Kondō'
       />
       <ListLink
-        link='https://www.goodreads.com/book/show/29584452-the-underground-railroad'
-        linkText='The Underground Railroad'
-        description='Colson Whitehead'
+        link='https://www.goodreads.com/book/show/32200035-arrival'
+        linkText='Arrival'
+        description='Ted Chiang'
       />
       <div style={{marginTop: 20}}>
         ... others on my <a href='https://www.goodreads.com/user/show/108515434-lawrence'>Goodreads Profile!</a>

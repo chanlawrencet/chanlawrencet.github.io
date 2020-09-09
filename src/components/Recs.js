@@ -29,6 +29,11 @@ const Recs = () => (
         description='Celeste Ng'
       />
       <ListLink
+        link='https://www.goodreads.com/book/show/36247169-educated'
+        linkText='Educated'
+        description='Tara Westover'
+      />
+      <ListLink
         link='https://www.goodreads.com/book/show/22693187-epic-measures?from_search=true'
         linkText='Epic Measures'
         description='Jeremy Smith'
