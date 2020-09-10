@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ $# != 2 ]
+if [ $# != 1 ]
 then
-	echo "Usage: ./deploy.sh [commit message]
+	echo "Usage: ./deploy.sh [commit message]"
 	exit
 fi
 
