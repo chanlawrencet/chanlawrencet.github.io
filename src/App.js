@@ -15,7 +15,31 @@ const appStyle = {
 const updated = '2020/09/23'
 
 const siteData = {
-  'Reading': {
+  'Selected Experience': {
+    body: [
+      {
+        title: 'Software Engineer - TriNetX',
+        subtitle: '2020',
+      },
+      {
+        title: 'Project Manager - Tufts',
+        subtitle: '2019-2020',
+      },
+      {
+        title: 'CS Teaching Fellow - Tufts',
+        subtitle: '2018-2020',
+      },
+      {
+        title: 'Google Student Innovator - VACO',
+        subtitle: '2018-2019',
+      },
+      {
+        title: 'Student Clinic President - Tufts',
+        subtitle: '2017-2019',
+      }    
+    ]
+  },
+  Reading: {
     body: [
       // {
       //   title: 'The Life-Changing Magic of Tidying Up',
