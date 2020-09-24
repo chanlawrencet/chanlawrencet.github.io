@@ -25,7 +25,7 @@ const siteData = {
       {
         title: 'Sandworm: A New Era of Cyberwar and the Hunt for the Kremlin\'s Most Dangerous Hackers',
         titleLink: 'https://www.goodreads.com/book/show/41436213-sandworm',
-        subtitle: 'Ted Chiang',
+        subtitle: 'Andy Greenberg',
       }
     ],
     footer: {
