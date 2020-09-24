@@ -12,24 +12,19 @@ const appStyle = {
   color: '#646464',
 }
 
-const updated = '2020/09/09'
+const updated = '2020/09/23'
 
 const siteData = {
   'Reading': {
     body: [
+      // {
+      //   title: 'The Life-Changing Magic of Tidying Up',
+      //   titleLink: 'https://www.goodreads.com/book/show/22823462-the-life-changing-magic-of-tidying-up',
+      //   subtitle: 'Marie Kondō',
+      // },
       {
-        title: 'Pachinko',
-        titleLink: 'https://www.goodreads.com/book/show/53331127-pachinko',
-        subtitle: 'Min Jin Lee',
-      },
-      {
-        title: 'The Life-Changing Magic of Tidying Up',
-        titleLink: 'https://www.goodreads.com/book/show/22823462-the-life-changing-magic-of-tidying-up',
-        subtitle: 'Marie Kondō',
-      },
-      {
-        title: 'Arrival',
-        titleLink: 'https://www.goodreads.com/book/show/32200035-arrival',
+        title: 'Sandworm: A New Era of Cyberwar and the Hunt for the Kremlin\'s Most Dangerous Hackers',
+        titleLink: 'https://www.goodreads.com/book/show/41436213-sandworm',
         subtitle: 'Ted Chiang',
       }
     ],
@@ -41,6 +36,11 @@ const siteData = {
   },
   Recommends: {
     body: [
+      {
+        title: 'Pachinko',
+        titleLink: 'https://www.goodreads.com/book/show/53331127-pachinko',
+        subtitle: 'Min Jin Lee',
+      },
       {
         title:'The Moment of Lift',
         titleLink: 'https://www.goodreads.com/book/show/40776644-the-moment-of-lift',
