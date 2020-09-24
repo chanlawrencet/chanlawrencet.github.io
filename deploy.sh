@@ -16,6 +16,7 @@ mv build ..
 git stash
 
 git checkout master
+
 cp -r ../build/* .
 
 git add .
