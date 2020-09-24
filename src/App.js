@@ -19,23 +19,23 @@ const siteData = {
     body: [
       {
         title: 'Software Engineer - TriNetX',
-        subtitle: '2020',
+        subtitle: '2020 -',
       },
       {
         title: 'Project Manager - Tufts',
-        subtitle: '2019-2020',
+        subtitle: '2019 - 2020',
       },
       {
         title: 'CS Teaching Fellow - Tufts',
-        subtitle: '2018-2020',
+        subtitle: '2018 - 2020',
       },
       {
         title: 'Google Student Innovator - VACO',
-        subtitle: '2018-2019',
+        subtitle: '2018 - 2019',
       },
       {
         title: 'Student Clinic President - Tufts',
-        subtitle: '2017-2019',
+        subtitle: '2017 - 2019',
       }    
     ]
   },
