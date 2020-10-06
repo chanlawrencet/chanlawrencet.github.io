@@ -12,7 +12,7 @@ const appStyle = {
   color: '#646464',
 }
 
-const updated = '2020/09/23'
+const updated = '2020/10/06'
 
 const siteData = {
   'Selected Experience': {
@@ -41,15 +41,15 @@ const siteData = {
   },
   Reading: {
     body: [
-      // {
-      //   title: 'The Life-Changing Magic of Tidying Up',
-      //   titleLink: 'https://www.goodreads.com/book/show/22823462-the-life-changing-magic-of-tidying-up',
-      //   subtitle: 'Marie Kondō',
-      // },
       {
-        title: 'Sandworm: A New Era of Cyberwar and the Hunt for the Kremlin\'s Most Dangerous Hackers',
-        titleLink: 'https://www.goodreads.com/book/show/41436213-sandworm',
-        subtitle: 'Andy Greenberg',
+        title: 'Americanah',
+        titleLink: 'https://www.goodreads.com/book/show/29416548-americanah',
+        subtitle: 'Chimamanda Ngozi Adichie',
+      },
+      {
+        title: 'How to Hide an Empire: A History of the Greater United States',
+        titleLink: 'https://www.goodreads.com/book/show/40121985-how-to-hide-an-empire',
+        subtitle: 'Daniel Immerwahr',
       }
     ],
     footer: {
