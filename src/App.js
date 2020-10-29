@@ -12,7 +12,7 @@ const appStyle = {
   color: '#646464',
 }
 
-const updated = '2020/10/06'
+const updated = '2020/10/29'
 
 const siteData = {
   'Selected Experience': {
