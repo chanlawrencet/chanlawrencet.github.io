@@ -45,11 +45,6 @@ const siteData = {
         title: 'Americanah',
         titleLink: 'https://www.goodreads.com/book/show/29416548-americanah',
         subtitle: 'Chimamanda Ngozi Adichie',
-      },
-      {
-        title: 'How to Hide an Empire: A History of the Greater United States',
-        titleLink: 'https://www.goodreads.com/book/show/40121985-how-to-hide-an-empire',
-        subtitle: 'Daniel Immerwahr',
       }
     ],
     footer: {
@@ -74,6 +69,11 @@ const siteData = {
         title:'Little Fires Everywhere',
         titleLink: 'https://www.goodreads.com/book/show/34273236-little-fires-everywhere?ac=1&from_search=true',
         subtitle:'Celeste Ng',
+      },
+      {
+        title: 'How to Hide an Empire: A History of the Greater United States',
+        titleLink: 'https://www.goodreads.com/book/show/40121985-how-to-hide-an-empire',
+        subtitle: 'Daniel Immerwahr',
       },
       {
         title:'Educated',
