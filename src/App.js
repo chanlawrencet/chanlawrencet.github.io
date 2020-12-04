@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useMemo, useRef } from "react"
 import Blurb from "./components/Blurb"
-import Header from "./components/Header"
+// import Header from "./components/Header"
 import Links from "./components/Links"
 import BodyElement from "./components/BodyElement"
 import Footer from "./components/Footer"
+import gsap, {Elastic, TweenLite} from "gsap"
 
 const appStyle = {
   fontFamily: 'Roboto',
@@ -123,19 +124,53 @@ const siteData = {
 }
 
 function App() {
+  const timeline = useMemo(() => gsap.timeline(), []);
+  const divRef = useRef(0);
+  const [seePenguin, setSeePenguin] = React.useState(false);
+  useEffect(() => {
+    timeline.from(divRef.current.childNodes, {
+      y: 100,
+      opacity: 0,
+      ease: "power4.inOut",
+      duration: 0.7,
+      stagger: 0.2,
+      rotation: 3,
+    });
+    timeline.to('.hand', {
+      // opacity: 0,
+      ease: Elastic.easeOut.config( 20, 2),
+      duration: 1,
+      rotate: 10,
+      delay: -1
+    })
+  }, [])
+
+  TweenLite.to('.hand', {
+    // opacity: 0,
+    ease: Elastic.easeOut.config( 20, 2),
+    duration: 1,
+    rotate: 20,
+  })
+
   return (
     <div style={appStyle}>
-      <div style={{flexDirection: 'column', maxWidth: 600, margin: 20,}}>
-        <Header/>
+      <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20,}}>
+        <div/>
+        <div
+          style={{fontSize: 40, fontWeight: 'bold', marginTop: 40, display:'flex'}}
+        >
+          <div>Hi, I'm Lawrence Chan!&nbsp;&nbsp;</div>
+          <div className={'hand'}>👋</div>
+        </div>
         <Blurb/>
         <Links/>
         {Object.keys(siteData).map(
           bodyTitle => <BodyElement
-                          key={bodyTitle}
-                          bodyTitle={bodyTitle}
-                          bodyContents={siteData[bodyTitle]}
+            key={bodyTitle}
+            bodyTitle={bodyTitle}
+            bodyContents={siteData[bodyTitle]}
           /> )}
-        <Footer data={updated}/>
+          <Footer data={updated}/>
       </div>
     </div>
   );
