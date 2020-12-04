@@ -12,7 +12,7 @@ const appStyle = {
   color: '#646464',
 }
 
-const updated = '2020/10/29'
+const updated = '2020/12/03'
 
 const siteData = {
   'Selected Experience': {
@@ -41,6 +41,11 @@ const siteData = {
   },
   Reading: {
     body: [
+      {
+        title: 'A Promised Land',
+        titleLink: 'https://www.goodreads.com/book/show/55359022-a-promised-land',
+        subtitle: 'Barack Obama',
+      },
       {
         title: 'Americanah',
         titleLink: 'https://www.goodreads.com/book/show/29416548-americanah',
