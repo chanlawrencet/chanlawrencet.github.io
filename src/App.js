@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo, useRef } from "react"
 import Blurb from "./components/Blurb"
-// import Header from "./components/Header"
 import Links from "./components/Links"
 import BodyElement from "./components/BodyElement"
 import Footer from "./components/Footer"
-import gsap, {Elastic, TweenLite} from "gsap"
+import gsap, {Elastic} from "gsap"
 
 const appStyle = {
   fontFamily: 'Roboto',
@@ -126,7 +125,6 @@ const siteData = {
 function App() {
   const timeline = useMemo(() => gsap.timeline(), []);
   const divRef = useRef(0);
-  const [seePenguin, setSeePenguin] = React.useState(false);
   useEffect(() => {
     timeline.from(divRef.current.childNodes, {
       y: 100,
@@ -137,20 +135,12 @@ function App() {
       rotation: 3,
     });
     timeline.to('.hand', {
-      // opacity: 0,
       ease: Elastic.easeOut.config( 20, 2),
       duration: 1,
       rotate: 10,
       delay: -1
     })
   }, [])
-
-  TweenLite.to('.hand', {
-    // opacity: 0,
-    ease: Elastic.easeOut.config( 20, 2),
-    duration: 1,
-    rotate: 20,
-  })
 
   return (
     <div style={appStyle}>
