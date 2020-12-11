@@ -154,7 +154,6 @@ function Home() {
           >
             <div>Hi, I'm Lawrence Chan!&nbsp;&nbsp;</div>
             <div className={'hand'}>👋</div>
-            <a href={'/h2020'}>link</a>
           </div>
           <Blurb/>
           <Links/>
@@ -166,7 +165,7 @@ function Home() {
             /> )}
           <Footer data={updated}/>
         </div>
-      </div> : <Holidays2020Fake/>}
+      </div> : <Holidays2020/>}
     </div>
   );
 }

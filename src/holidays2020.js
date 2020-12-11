@@ -20,10 +20,10 @@ function Holidays2020(){
   const [code, setCode] = useState('');
   const [ping, setPing] = useState(false)
   const [locked, setLocked] = useState(true)
-  const [numCorrect, setNumCorrect] = useState(0);
+  const [questionIdx, setQuestionIdx] = useState(0);
 
   function pingFunc() {
-    fetch('http://127.0.0.1:5000/ping').then(res => res.json()).then((res) => {
+    fetch('https://chanlawrenceth2020server2.herokuapp.com/ping').then(res => res.json()).then((res) => {
       if (res.pong) {
         setTimeout(() => {
           setPing(true)
@@ -48,7 +48,7 @@ function Holidays2020(){
     e.stopPropagation();
     e.preventDefault();
     console.log(code)
-    fetch('http://127.0.0.1:5000/search?code=' + code).then(res => res.json()).then((res) => {
+    fetch('https://chanlawrenceth2020server2.herokuapp.com/search?code=' + code).then(res => res.json()).then((res) => {
       if (res.result === false) {
         showInvalidMessage(true)
       } else {
@@ -59,7 +59,7 @@ function Holidays2020(){
   }
   return(
     <div style={pageStyle}>
-      <div style={{display: 'flex', flexDirection: 'column', maxWidth: '80vw', marginTop: 40, marginBottom: 40, backgroundColor: 'white', padding: 20, boxShadow: '7px 7px 10px grey', overflowY: 'scroll'}}>
+      <div style={{display: 'flex', flexDirection: 'column', maxWidth: '80vw', marginTop: 40, marginBottom: 70, backgroundColor: 'white', padding: 20, boxShadow: '7px 7px 10px grey', overflowY: 'scroll'}}>
         <div style={{fontSize: 40}}>
           Merry Christmas and Happy New Year! 🎄🎄
         </div>
@@ -88,14 +88,20 @@ function Holidays2020(){
             </div> : <div>Hold on... contacting server</div>}
           </div> : null}
         {showContent && content && locked ? <div>
-          <div style={{fontSize: 25, marginTop: 15}}>
-            Pop quiz! Answer the below to unlock your card!
-          </div>
-          {Object.keys(content.quiz).map((key, index) => <Question key={key} index={index} question={key} answer={content.quiz[key]} numCorrect={numCorrect} setNumCorrect={setNumCorrect}/> )}
-          <br/>
-          Number correct: {numCorrect} of {Object.keys(content.quiz).length} {<span>{[...Array(numCorrect).keys()].map(x => <span key={x}>🎄</span>)}</span>}
-          <br/>
-          {numCorrect === Object.keys(content.quiz).length && <input type='button' value='Congrats! See Card!' style={{fontSize: 20, color: '#646464', marginTop: 20}} onClick={() => setLocked(false)}/>}
+          {questionIdx < Object.keys(content.quiz).length ? <div>
+            <div style={{fontSize: 25, marginTop: 15}}>
+              Pop quiz! Answer the below to unlock your card!
+              <br/>
+              {questionIdx + 1} of {Object.keys(content.quiz).length} {<span>{[...Array(questionIdx + 1).keys()].map(x => <span key={x}>🎄</span>)}</span>}
+            </div>
+            <Question question={Object.keys(content.quiz)[questionIdx]} answer={content.quiz[Object.keys(content.quiz)[questionIdx]]} questionIdx={questionIdx} setQuestionIdx={setQuestionIdx}/>
+            <br/>
+          </div> : <div>
+            <div style={{fontSize: 25, marginTop: 15}}>
+              Congratulations! You've unlocked the card! Hope you enjoyed the quiz.
+            </div>
+            <input type='button' value='Click here to see the card' style={{fontSize: 20, color: '#646464', marginTop: 20}} onClick={() => setLocked(false)}/>
+          </div>}
         </div> : null}
 
         {showContent && content && !locked ?
