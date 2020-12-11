@@ -144,13 +144,20 @@ function Home() {
 
   return (
     <div style={appStyle}>
-      <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20,}}>
+      <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20}}>
+        <div style={{backgroundColor: 'green', width: '100%vh', height: 40, textAlign: 'center'}}>
+          <a href={'/h2020'} style={{ color: 'white', fontSize: 20}}>
+            Have a holiday code? Click here!
+          </a>
+          <span style={{fontSize: 20, marginLeft: 5}}>🎅</span>
+        </div>
         <div/>
         <div
           style={{fontSize: 40, fontWeight: 'bold', marginTop: 40, display:'flex'}}
         >
           <div>Hi, I'm Lawrence Chan!&nbsp;&nbsp;</div>
           <div className={'hand'}>👋</div>
+          <a href={'/h2020'}>link</a>
         </div>
         <Blurb/>
         <Links/>
