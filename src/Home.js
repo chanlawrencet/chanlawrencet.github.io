@@ -1,9 +1,11 @@
-import React, { useEffect, useMemo, useRef } from "react"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 import Blurb from "./components/Blurb"
 import Links from "./components/Links"
 import BodyElement from "./components/BodyElement"
 import Footer from "./components/Footer"
 import gsap, {Elastic} from "gsap"
+import Holidays2020 from "./holidays2020"
+import Holidays2020Fake from "./holidaysfake"
 
 const appStyle = {
   fontFamily: 'Roboto',
@@ -123,6 +125,7 @@ const siteData = {
 }
 
 function Home() {
+  console.log(window.location.href)
   const timeline = useMemo(() => gsap.timeline(), []);
   const divRef = useRef(0);
   useEffect(() => {
@@ -143,32 +146,27 @@ function Home() {
   }, [])
 
   return (
-    <div style={appStyle}>
-      <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20}}>
-        <div style={{backgroundColor: 'green', width: '100%vh', height: 40, textAlign: 'center'}}>
-          <a href={'/h2020'} style={{ color: 'white', fontSize: 20}}>
-            Have a holiday code? Click here!
-          </a>
-          <span style={{fontSize: 20, marginLeft: 5}}>🎅</span>
-        </div>
-        <div/>
-        <div
-          style={{fontSize: 40, fontWeight: 'bold', marginTop: 40, display:'flex'}}
-        >
-          <div>Hi, I'm Lawrence Chan!&nbsp;&nbsp;</div>
-          <div className={'hand'}>👋</div>
-          <a href={'/h2020'}>link</a>
-        </div>
-        <Blurb/>
-        <Links/>
-        {Object.keys(siteData).map(
-          bodyTitle => <BodyElement
-            key={bodyTitle}
-            bodyTitle={bodyTitle}
-            bodyContents={siteData[bodyTitle]}
-          /> )}
+    <div>
+      {!window.location.href.includes("h2020") ? <div style={appStyle}>
+        <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20}}>
+          <div
+            style={{fontSize: 40, fontWeight: 'bold', marginTop: 40, display:'flex'}}
+          >
+            <div>Hi, I'm Lawrence Chan!&nbsp;&nbsp;</div>
+            <div className={'hand'}>👋</div>
+            <a href={'/h2020'}>link</a>
+          </div>
+          <Blurb/>
+          <Links/>
+          {Object.keys(siteData).map(
+            (bodyTitle, i) => <BodyElement
+              key={i}
+              bodyTitle={bodyTitle}
+              bodyContents={siteData[bodyTitle]}
+            /> )}
           <Footer data={updated}/>
-      </div>
+        </div>
+      </div> : <Holidays2020Fake/>}
     </div>
   );
 }
