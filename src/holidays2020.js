@@ -76,7 +76,7 @@ function Holidays2020(){
               </div>
               <br/>
               <form onSubmit={e => handleSubmit(e)}>
-                <input type='text' size={4} style={{fontSize: 30, color: '#646464'}} onChange={e => setCode(e.target.value)}/>
+                <input type='text' size={12} style={{fontSize: 30, color: '#646464'}} onChange={e => setCode(e.target.value)}/>
                 <input type='submit' value={'enter'} style={{fontSize: 20, color: '#646464', marginLeft: 20}} />
               </form>
               {invalidMessage ? <div>
