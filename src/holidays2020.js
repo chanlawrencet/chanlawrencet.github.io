@@ -68,6 +68,8 @@ function Holidays2020(){
           <div style={{fontSize: 30, marginTop: 20, }}>
             <div>
               With this year's holiday season seeming different than most, I've decided to have a little fun and make my own ecards.
+              <br/>
+              This site is best viewed on a computer or tablet, though it is kinda mobile compatible.
             </div>
             <br/>
             {ping ? <div>
@@ -91,6 +93,10 @@ function Holidays2020(){
           {questionIdx < Object.keys(content.quiz).length ? <div>
             <div style={{fontSize: 25, marginTop: 15}}>
               Pop quiz! Answer the below to unlock your card!
+              <br/>
+              Keep trying until you get the answer -- a button will pop up once you get it right!
+              <br/>
+              Spaces don't count (eg. "hello there" is the same as "hellothere") and checks are case insensitive. Good luck!
               <br/>
               {questionIdx + 1} of {Object.keys(content.quiz).length} {<span>{[...Array(questionIdx + 1).keys()].map(x => <span key={x}>🎄</span>)}</span>}
             </div>
