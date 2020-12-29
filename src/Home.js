@@ -1,11 +1,9 @@
-import React, { useEffect, useMemo, useRef, useState } from "react"
+import React, { useEffect, useMemo, useRef } from "react"
 import Blurb from "./components/Blurb"
 import Links from "./components/Links"
 import BodyElement from "./components/BodyElement"
 import Footer from "./components/Footer"
 import gsap, {Elastic} from "gsap"
-import Holidays2020 from "./holidays2020"
-import Holidays2020Fake from "./holidaysfake"
 
 const appStyle = {
   fontFamily: 'Roboto',
@@ -14,7 +12,7 @@ const appStyle = {
   color: '#646464',
 }
 
-const updated = '2020/12/03'
+const updated = '2020/12/29'
 
 const siteData = {
   'Selected Experience': {
@@ -38,7 +36,7 @@ const siteData = {
       {
         title: 'Student Clinic President - Tufts',
         subtitle: '2017 - 2019',
-      }    
+      }
     ]
   },
   Reading: {
@@ -146,26 +144,24 @@ function Home() {
   }, [])
 
   return (
-    <div>
-      {!window.location.href.includes("h2020") ? <div style={appStyle}>
-        <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20}}>
-          <div
-            style={{fontSize: 40, fontWeight: 'bold', marginTop: 40, display:'flex'}}
-          >
-            <div>Hi, I'm Lawrence Chan!&nbsp;&nbsp;</div>
-            <div className={'hand'}>👋</div>
-          </div>
-          <Blurb/>
-          <Links/>
-          {Object.keys(siteData).map(
-            (bodyTitle, i) => <BodyElement
-              key={i}
-              bodyTitle={bodyTitle}
-              bodyContents={siteData[bodyTitle]}
-            /> )}
-          <Footer data={updated}/>
+    <div style={appStyle}>
+      <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20}}>
+        <div
+          style={{fontSize: 40, fontWeight: 'bold', marginTop: 40, display:'flex'}}
+        >
+          <div>Hi, I'm Lawrence Chan!&nbsp;&nbsp;</div>
+          <div className={'hand'}>👋</div>
         </div>
-      </div> : <Holidays2020/>}
+        <Blurb/>
+        <Links/>
+        {Object.keys(siteData).map(
+          (bodyTitle, i) => <BodyElement
+            key={i}
+            bodyTitle={bodyTitle}
+            bodyContents={siteData[bodyTitle]}
+          /> )}
+        <Footer data={updated}/>
+      </div>
     </div>
   );
 }
