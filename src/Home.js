@@ -22,6 +22,10 @@ const siteData = {
         subtitle: '2020 -',
       },
       {
+        title: 'Admissions Interviewer - Tufts',
+        subtitle: '2019 -',
+      },
+      {
         title: 'Project Manager - Tufts',
         subtitle: '2019 - 2020',
       },
