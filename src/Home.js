@@ -51,7 +51,7 @@ const siteData = {
         subtitle: 'Martin Kleppmann',
       },
       {
-        title: 'Becoming'
+        title: 'Becoming',
         titleLink: 'https://www.goodreads.com/book/show/38746485-becoming',
         subtitle: 'Michelle Obama',
       },
