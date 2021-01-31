@@ -12,7 +12,7 @@ const appStyle = {
   color: '#646464',
 }
 
-const updated = '2020/12/29'
+const updated = '2021/01/31'
 
 const siteData = {
   'Selected Experience': {
@@ -46,9 +46,14 @@ const siteData = {
   Reading: {
     body: [
       {
-        title: 'A Promised Land',
-        titleLink: 'https://www.goodreads.com/book/show/55359022-a-promised-land',
-        subtitle: 'Barack Obama',
+        title: 'Designing Data-Intensive Applications',
+        titleLink: 'https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications',
+        subtitle: 'Martin Kleppmann',
+      },
+      {
+        title: 'Becoming'
+        titleLink: 'https://www.goodreads.com/book/show/38746485-becoming',
+        subtitle: 'Michelle Obama',
       },
       {
         title: 'Americanah',
