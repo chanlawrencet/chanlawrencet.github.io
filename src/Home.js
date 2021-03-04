@@ -12,7 +12,7 @@ const appStyle = {
   color: '#646464',
 }
 
-const updated = '2021/01/31'
+const updated = '2021/03/04'
 
 const siteData = {
   'Selected Experience': {
@@ -46,14 +46,14 @@ const siteData = {
   Reading: {
     body: [
       {
+        title: 'Thinking, Fast and Slow',
+        titleLink: 'https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow',
+        subtitle: 'Daniel Kahneman',
+      },
+      {
         title: 'Designing Data-Intensive Applications',
         titleLink: 'https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications',
         subtitle: 'Martin Kleppmann',
-      },
-      {
-        title: 'Becoming',
-        titleLink: 'https://www.goodreads.com/book/show/38746485-becoming',
-        subtitle: 'Michelle Obama',
       },
       {
         title: 'Americanah',
@@ -69,6 +69,11 @@ const siteData = {
   },
   Recommends: {
     body: [
+      {
+        title:'Deep Work',
+        titleLink: 'https://www.goodreads.com/book/show/25744928-deep-work',
+        subtitle:'Cal Newport',
+      },
       {
         title: 'Pachinko',
         titleLink: 'https://www.goodreads.com/book/show/53331127-pachinko',
@@ -93,11 +98,6 @@ const siteData = {
         title:'Educated',
         titleLink: 'https://www.goodreads.com/book/show/36247169-educated',
         subtitle:'Tara Westover',
-      },
-      {
-        title:'Epic Measures',
-        titleLink: 'https://www.goodreads.com/book/show/22693187-epic-measures?from_search=true',
-        subtitle:'Jeremy Smith',
       },
     ]
   },
