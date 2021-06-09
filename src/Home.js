@@ -46,6 +46,11 @@ const siteData = {
   Reading: {
     body: [
       {
+        title: 'Columbine',
+        titleLink: 'https://www.goodreads.com/book/show/5632446-columbine',
+        subtitle: 'Dave Cullen',
+      },
+      {
         title: 'Thinking, Fast and Slow',
         titleLink: 'https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow',
         subtitle: 'Daniel Kahneman',
@@ -54,11 +59,6 @@ const siteData = {
         title: 'Designing Data-Intensive Applications',
         titleLink: 'https://www.goodreads.com/book/show/23463279-designing-data-intensive-applications',
         subtitle: 'Martin Kleppmann',
-      },
-      {
-        title: 'Americanah',
-        titleLink: 'https://www.goodreads.com/book/show/29416548-americanah',
-        subtitle: 'Chimamanda Ngozi Adichie',
       }
     ],
     footer: {
@@ -70,34 +70,44 @@ const siteData = {
   Recommends: {
     body: [
       {
-        title:'Deep Work',
+        title: 'Book - Deep Work',
         titleLink: 'https://www.goodreads.com/book/show/25744928-deep-work',
         subtitle:'Cal Newport',
       },
       {
-        title: 'Pachinko',
+        title: 'Book - Pachinko',
         titleLink: 'https://www.goodreads.com/book/show/53331127-pachinko',
         subtitle: 'Min Jin Lee',
       },
       {
-        title:'The Moment of Lift',
+        title: 'Book - The Moment of Lift',
         titleLink: 'https://www.goodreads.com/book/show/40776644-the-moment-of-lift',
         subtitle:'Melinda Gates',
       },
       {
-        title:'Little Fires Everywhere',
+        title: 'Book - Little Fires Everywhere',
         titleLink: 'https://www.goodreads.com/book/show/34273236-little-fires-everywhere?ac=1&from_search=true',
         subtitle:'Celeste Ng',
       },
       {
-        title: 'How to Hide an Empire: A History of the Greater United States',
+        title: 'Book - How to Hide an Empire: A History of the Greater United States',
         titleLink: 'https://www.goodreads.com/book/show/40121985-how-to-hide-an-empire',
         subtitle: 'Daniel Immerwahr',
       },
       {
-        title:'Educated',
+        title:'Book - Educated',
         titleLink: 'https://www.goodreads.com/book/show/36247169-educated',
         subtitle:'Tara Westover',
+      },
+      {
+        title:'Podcast - Modern Love',
+        titleLink: 'https://www.nytimes.com/column/modern-love-podcast',
+        subtitle:'The New York Times',
+      },
+      {
+        title:'Podcast - This American Life',
+        titleLink: 'https://www.thisamericanlife.org',
+        subtitle:'This American Life',
       },
     ]
   },
