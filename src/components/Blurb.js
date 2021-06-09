@@ -8,10 +8,10 @@ const Blurb = () => (
       lineHeight: 1.5
     }}
   >
-    Software Engineer at <a href='https://www.trinetx.com' style={{}}>TriNetX, Inc.</a>, where I work on the health analytics team.
+    Software Engineer at <a href='https://www.trinetx.com' style={{}}>TriNetX, LLC.</a>, where I work on the health analytics team.
     I graduated from <a href='https://www.tufts.edu'>Tufts University</a> with a degree in Computer Science
     and Community Health. I'm passionate about health inequities, data analytics, and bridging the gap between
-    technology and wellness.
+    technology and wellness. I primarily work in Java and JavaScript (React).
   </div>
 )
 
