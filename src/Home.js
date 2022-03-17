@@ -142,24 +142,32 @@ const siteData = {
 }
 
 function Home() {
-  console.log(window.location.href)
   const timeline = useMemo(() => gsap.timeline(), []);
   const divRef = useRef(0);
   useEffect(() => {
     timeline.from(divRef.current.childNodes, {
       y: 100,
       opacity: 0,
-      ease: "power4.inOut",
+      ease: "power4.in",
       duration: 0.7,
       stagger: 0.2,
       rotation: 3,
+    }).then(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })
     });
-    timeline.to('.hand', {
-      ease: Elastic.easeOut.config( 20, 2),
-      duration: 1,
-      rotate: 10,
-      delay: -1
-    })
+    // timeline.to('.hand', {
+    //   ease: Elastic.easeOut.config( 20, 2),
+    //   duration: 1,
+    //   rotate: 10,
+    //   delay: -1
+    // })
+  }, [])
+
+  useEffect(() => {
   }, [])
 
   return (
