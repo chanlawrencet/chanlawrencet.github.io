@@ -1,16 +1,20 @@
 import React from 'react';
+import styled from 'styled-components'
 
+const LinkDiv = styled.div`
+  font-size: 20px;
+`;
 export default function ListLink({data}) {
   const {title, titleLink, subtitle} = data;
   return(
     <div style={{marginBottom: 20}}>
-      <div
+      <LinkDiv
         style={{fontSize: 20}}
-      >{ titleLink ? 
+      >{ titleLink ?
         <a href={titleLink}>{title}</a> :
         <div>{title}</div>
       }
-      </div>
+      </LinkDiv>
       <div
         style={{fontSize: 17}}
       >

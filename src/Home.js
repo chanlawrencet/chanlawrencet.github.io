@@ -4,13 +4,17 @@ import Links from "./components/Links"
 import BodyElement from "./components/BodyElement"
 import Footer from "./components/Footer"
 import gsap, {Elastic} from "gsap"
+import styled from 'styled-components';
 
-const appStyle = {
-  fontFamily: 'Roboto',
-  display: 'flex',
-  justifyContent: 'center',
-  color: '#646464',
+const HomeDiv = styled.div`
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  color: #646464;
+  a:link, a:visited, a:hover, a:active {
+  color: #646464;
 }
+`
 
 const updated = '2021/06/08'
 
@@ -146,32 +150,26 @@ function Home() {
   const divRef = useRef(0);
   useEffect(() => {
     timeline.from(divRef.current.childNodes, {
-      y: 100,
+      y: 50,
       opacity: 0,
       ease: "power4.in",
       duration: 0.7,
       stagger: 0.2,
       rotation: 3,
-    }).then(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-      })
     });
-    // timeline.to('.hand', {
-    //   ease: Elastic.easeOut.config( 20, 2),
-    //   duration: 1,
-    //   rotate: 10,
-    //   delay: -1
-    // })
+    timeline.to('.hand', {
+      ease: Elastic.easeOut.config( 20, 2),
+      duration: 1,
+      rotate: 10,
+      delay: -1
+    })
   }, [])
 
   useEffect(() => {
   }, [])
 
   return (
-    <div style={appStyle}>
+    <HomeDiv>
       <div ref={divRef} style={{flexDirection: 'column', maxWidth: 600, margin: 20}}>
         <div
           style={{fontSize: 40, fontWeight: 'bold', marginTop: 40, display:'flex'}}
@@ -189,7 +187,7 @@ function Home() {
           /> )}
         <Footer data={updated}/>
       </div>
-    </div>
+    </HomeDiv>
   );
 }
 
