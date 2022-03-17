@@ -5,7 +5,7 @@ import { MonochromePlayground } from "./monochromePlayground/MonochromePlaygroun
 
 function App(){
   const url = window.location.href;
-  // would rather use react-router-dom _but_ GitHub Pages does not play well with rotes
+  // would rather use react-router-dom _but_ GitHub Pages does not play well with routes
   if (url.includes('monochrome')) {
     return <MonochromePlayground/>
   } else {
