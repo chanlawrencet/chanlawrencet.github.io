@@ -81,9 +81,9 @@ const ColorBlock = ({r,g,b,half=false}) => {
 }
 
 const MonochromePlayground = () => {
-  const [r, setR] = React.useState(100);
-  const [g, setG] = React.useState(100);
-  const [b, setB] = React.useState(100);
+  const [r, setR] = React.useState(62);
+  const [g, setG] = React.useState(142);
+  const [b, setB] = React.useState(222);
   const [monochromeVal, setMonochromeVal] = React.useState(50);
   const [monochrome, setMonochrome] = React.useState(false);
 

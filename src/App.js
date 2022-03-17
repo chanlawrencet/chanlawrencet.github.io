@@ -1,16 +1,18 @@
 import Home from "./Home"
 import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MonochromePlayground } from "./monochromePlayground/MonochromePlayground"
 
 
 function App(){
-  const url = window.location.href;
-  // would rather use react-router-dom _but_ GitHub Pages does not play well with rotes
-  if (url.includes('monochrome')) {
-    return <MonochromePlayground/>
-  } else {
-    return <Home/>
-  }
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/monochrome" element={<MonochromePlayground/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
