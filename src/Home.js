@@ -16,7 +16,7 @@ const HomeDiv = styled.div`
 }
 `
 
-const updated = '2021/06/08'
+const updated = '2022/11/09'
 
 const siteData = {
   'Selected Experience': {
@@ -49,11 +49,6 @@ const siteData = {
   },
   Reading: {
     body: [
-      {
-        title: 'Columbine',
-        titleLink: 'https://www.goodreads.com/book/show/5632446-columbine',
-        subtitle: 'Dave Cullen',
-      },
       {
         title: 'Thinking, Fast and Slow',
         titleLink: 'https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow',
