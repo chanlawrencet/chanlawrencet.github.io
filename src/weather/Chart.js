@@ -4,7 +4,7 @@ import dayjs from "dayjs"
 import HighchartsReact from "highcharts-react-official"
 
 
-export const Chart = ({series, title='', yLabel, showLegend=false, day}) => {
+export const Chart = ({softYMax=undefined, series, title='', yLabel, showLegend=false, day, height=null}) => {
   return <div>
     <HighchartsReact highcharts={Highcharts} options={{
       title: {
@@ -19,6 +19,7 @@ export const Chart = ({series, title='', yLabel, showLegend=false, day}) => {
         maxPadding: 0.3,
         min: yLabel === 'percent' ? 0 : null,
         max: yLabel === 'percent' ? 100 : null,
+        softMax: softYMax
       },
       xAxis: {
         title: {
@@ -38,6 +39,7 @@ export const Chart = ({series, title='', yLabel, showLegend=false, day}) => {
         panning: true,
         panKey: 'shift',
         animation: false,
+        height: height
       },
       tooltip: {
         shared: true,
