@@ -176,7 +176,8 @@ export const Weather = ({lat, lon, setWeatherSearch}) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        width: '100%'
+        width: '100%',
+        marginBottom: -20,
       }}
     >
       <h2>{location}</h2>
@@ -193,6 +194,9 @@ export const Weather = ({lat, lon, setWeatherSearch}) => {
       </div>
 
     </div>
+    <h3>
+      {titleFormatter(day)}
+    </h3>
     <div
       style={{
         display: 'flex',
@@ -205,9 +209,10 @@ export const Weather = ({lat, lon, setWeatherSearch}) => {
         setDay(day - 1);
       }
       }/></div>
-      <h2 style={{textAlign: 'center'}}>
-        {titleFormatter(day)}
-      </h2>
+      <div><input type='button' disabled={day === 0 } value={'today'} onClick={() => {
+        setDay(0);
+      }
+      }/></div>
       <div><input type='button' disabled={day === 5} value={'next day ->'} onClick={() => {
         setDay(day + 1);
       }
