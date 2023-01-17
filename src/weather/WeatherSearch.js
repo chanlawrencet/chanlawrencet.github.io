@@ -1,8 +1,7 @@
 import React, { useEffect } from "react"
 import { STATE_LOOKUP, toUpper } from "./utils"
 
-export const WeatherSearch = ({url}) => {
-  console.log({url})
+export const WeatherSearch = ({setWeatherLat, setWeatherLon, setWeatherSearch}) => {
   const [searchText, setSearchText] = React.useState("")
   const [places, setPlaces] = React.useState([]);
   const [searchResults, setSearchResults] = React.useState([]);
@@ -72,7 +71,12 @@ export const WeatherSearch = ({url}) => {
         marginBottom: 5,
         color: 'black'
       }}
-           href={url + `/${result['la']}/${result['ln']}`}
+           onClick={() => {
+             setWeatherLat(result['la']);
+             setWeatherLon(result['ln']);
+             setWeatherSearch(false);
+             window.history.pushState('page2', 'Title', `/#/weather/${result['la']}/${result['ln']}`);
+           }}
       >{toUpper(result['n'])} - {result['s'].toUpperCase()}</a>
       </div>
     })}

@@ -38,8 +38,7 @@ const WEATHER_NAME_MAP = {
 }
 
 
-export const Weather = ({lat, lon}) => {
-  console.log({lat, lon})
+export const Weather = ({lat, lon, setWeatherSearch}) => {
   const [temperatureHourly, setTemperatureHourly] = React.useState([]);
   const [temperatureDew, setTemperatureDew] = React.useState([]);
   const [temperatureWind, setTemperatureWind] = React.useState([]);
@@ -50,7 +49,6 @@ export const Weather = ({lat, lon}) => {
   const [loaded, setLoaded] = React.useState(false);
   const [precIn, setPrecIn] = React.useState([]);
   const [location, setLocation] = React.useState("");
-  console.log({humidity})
 
   const [day, setDay] = React.useState(0);
 
@@ -121,7 +119,7 @@ export const Weather = ({lat, lon}) => {
   useEffect(() => {
     const latF = parseFloat(lat);
     const lonF = parseFloat(lon);
-    fetch('http://localhost:3000/places.json')
+    fetch('https://www.chanlawrencet.com/places.json')
       .then(res => res.json())
       .then(places => {
         for (let i = 0; i < places.length; i++) {
@@ -182,6 +180,18 @@ export const Weather = ({lat, lon}) => {
       }}
     >
       <h2>{location}</h2>
+      <div
+        style={{
+          cursor: 'pointer'
+        }}
+        onClick={() => {
+          setWeatherSearch(true);
+          window.history.pushState('page2', 'Title', `/#/weather`);
+        }}
+      >
+        <h4>search 🔎</h4>
+      </div>
+
     </div>
     <div
       style={{
