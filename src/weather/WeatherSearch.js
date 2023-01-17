@@ -20,10 +20,10 @@ export const WeatherSearch = ({setWeatherLat, setWeatherLon, setWeatherSearch}) 
     if (text.length < 4) {
       return;
     }
-    const lower = text.toLowerCase()
+    const lower = text.toLowerCase().trim()
 
     if (lower.includes(',')) {
-      const citySoFar = lower.split(',')[0]
+      const citySoFar = lower.split(',')[0].trim()
       const stateSoFar = lower.split(',')[1].replace(' ', '')
       if (stateSoFar.length <= 2) {
         setSearchResults(places.filter(place => place['n'].toString().toLowerCase().includes(citySoFar) && place['s'].toString().toLowerCase().includes(stateSoFar)))
