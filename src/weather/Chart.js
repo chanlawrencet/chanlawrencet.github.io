@@ -31,7 +31,17 @@ export const Chart = ({softYMax=undefined, series, title='', yLabel, showLegend=
             return dayjs.unix(v.value).format('ha')
           }
         },
-        min: dayjs().startOf('day').add(day, 'day').unix()
+        min: dayjs().startOf('day').add(day, 'day').unix(),
+        plotLines: [{
+          color: '#FF0000', // Red
+          width: 2,
+          value: dayjs().unix() // Position, you'll have to translate this to the values on your x axis
+        }],
+        tickPositioner: function () {
+          const ticks = this.series[0].processedXData.slice();
+          ticks.info = this.tickPositions.info;
+          return ticks;
+        }
       },
       chart: {
         type: 'spline',
