@@ -26,10 +26,16 @@ const Links = () => (
       <img height={20} width={75} src={PhotoPx}/>
     </a>
     <a
-      style={{fontSize: 17}}
+      style={{fontSize: 17, marginRight: 20}}
       href='https://www.chanlawrencet.com/Lawrence_Chan_Resume.pdf'
     >
       Resume
+    </a>
+    <a
+      style={{fontSize: 17}}
+      href='https://chanlawrencet.blogspot.com/'
+    >
+      Blog
     </a>
   </div>
 )
