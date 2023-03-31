@@ -16,14 +16,22 @@ const HomeDiv = styled.div`
 }
 `
 
-const updated = '2022/11/09'
+const updated = '2023-03-30'
 
 const siteData = {
   'Selected Experience': {
     body: [
       {
+        title: 'Senior Software Engineer - TriNetX',
+        subtitle: '2023 -',
+      },
+      {
         title: 'Software Engineer - TriNetX',
-        subtitle: '2020 -',
+        subtitle: '2020 - 2022',
+      },
+      {
+        title: 'Volunteer - Boston Chinatown Neighborhood Center',
+        subtitle: '2022 -',
       },
       {
         title: 'Admissions Interviewer - Tufts',
@@ -50,9 +58,9 @@ const siteData = {
   Reading: {
     body: [
       {
-        title: 'Thinking, Fast and Slow',
-        titleLink: 'https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow',
-        subtitle: 'Daniel Kahneman',
+        title: 'Tomorrow, and Tomorrow, and Tomorrow',
+        titleLink: 'https://www.goodreads.com/book/show/58784475-tomorrow-and-tomorrow-and-tomorrow',
+        subtitle: 'Gabrielle Zevin',
       },
       {
         title: 'Designing Data-Intensive Applications',
