@@ -27,7 +27,7 @@ const Links = () => (
     </a>
     <a
       style={{fontSize: 17, marginRight: 20}}
-      href='https://www.chanlawrencet.com/Lawrence_Chan_Resume.pdf'
+      href='https://drive.google.com/file/d/0B2k_yE8H5COWZVc1X0pubmVENWs/preview?resourcekey=0-il9auWgx5FWkL3yO0u9AxA'
     >
       Resume
     </a>
