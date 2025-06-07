@@ -22,8 +22,12 @@ const siteData = {
   'Selected Experience': {
     body: [
       {
+        title: 'Engineering Manager - TriNetX',
+        subtitle: '2025 -',
+      },
+      {
         title: 'Senior Software Engineer - TriNetX',
-        subtitle: '2023 -',
+        subtitle: '2023 - 2025',
       },
       {
         title: 'Software Engineer - TriNetX',
