@@ -8,6 +8,10 @@ then
 	exit
 fi
 
+export NODE_OPTIONS=--openssl-legacy-provider
+
+yarn
+
 yarn build
 
 rm -rf ../build
