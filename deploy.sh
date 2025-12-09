@@ -1,23 +1,30 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-if [ $# !=  2 ]
+# deploy.sh - simplified for master branch deployment
+
+if [ $# != 1 ]
 then
-    echo "Usage: ./deploy.sh [commit message]"
+	echo "Usage: ./deploy.sh [commit message]"
+	exit
 fi
 
-yarn deploy
+export NODE_OPTIONS=--openssl-legacy-provider
 
-rm -rf ../build
-mv ./build ..
+# Install dependencies
+yarn
 
-git checkout master
+# Build the project
+yarn build
 
-cp -r ../build/* .
-rm -rf ../build
+# Copy build files to current directory
+cp -r build/* .
 
+# Clean up build directory
+rm -rf build
+
+# Commit and push
 git add .
 git commit -m "$1"
 git push
 
-git checkout dev
-
+echo "Deploy complete."

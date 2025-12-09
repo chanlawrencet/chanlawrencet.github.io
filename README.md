@@ -3,4 +3,6 @@ Personal website, made with React
 
 Link to site: [https://www.chanlawrencet.com](https://www.chanlawrencet.com)
 
-Development under "dev" branch.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Deploy with ./deploy.sh
