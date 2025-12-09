@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# deploy.sh - simplified for master branch deployment
+# deploy.sh - deploy to gh-pages branch
 
 if [ $# != 1 ]
 then
@@ -10,21 +10,16 @@ fi
 
 export NODE_OPTIONS=--openssl-legacy-provider
 
+# Commit source changes first
+git add .
+git commit -m "$1"
+git push origin master
+
 # Install dependencies
 yarn
 
-# Build the project
+# Build and deploy to gh-pages
 yarn build
+npx gh-pages -d build
 
-# Copy build files to current directory
-cp -r build/* .
-
-# Clean up build directory
-rm -rf build
-
-# Commit and push
-git add .
-git commit -m "$1"
-git push
-
-echo "Deploy complete."
+echo "Deploy complete! Site will be live at https://www.chanlawrencet.com"
