@@ -11,18 +11,6 @@
 # production
 /build
 
-# built files in root (from deploy script)
-/index.html
-/asset-manifest.json
-/service-worker.js
-/precache-manifest.*.js
-/static
-/favicon.ico
-/manifest.json
-/robots.txt
-/404.html
-/places.json
-
 # misc
 .DS_Store
 .env.local
