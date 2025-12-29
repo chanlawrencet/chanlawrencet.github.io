@@ -16,7 +16,7 @@ const HomeDiv = styled.div`
 }
 `
 
-const updated = '2023-03-30'
+const updated = '2025-12-29'
 
 const siteData = {
   'Selected Experience': {
