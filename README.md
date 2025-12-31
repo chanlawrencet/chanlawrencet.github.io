@@ -48,16 +48,20 @@ This creates an optimized production build in the `build/` directory.
 
 ## Deployment
 
-Deploy to GitHub Pages:
+Deploy to GitHub Pages (from master branch):
 
 ```bash
 npm run deploy
+git add .
+git commit -m "Deploy site updates"
+git push origin master
 ```
 
-This automatically:
-1. Builds the production version
-2. Deploys to the `gh-pages` branch
-3. Updates the live site at chanlawrencet.com
+The deploy script:
+1. Builds the production version to `build/`
+2. Copies build files to the root directory
+3. GitHub Pages serves the site from the master branch root
+4. Updates appear at chanlawrencet.com after pushing
 
 ## Configuration Notes
 

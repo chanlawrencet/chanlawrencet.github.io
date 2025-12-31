@@ -11,6 +11,9 @@
 # production
 /build
 
+# Root-level build artifacts are NOT ignored - they're needed for GitHub Pages deployment
+# Only the /build directory itself is ignored
+
 # misc
 .DS_Store
 .env.local
